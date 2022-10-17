@@ -78,7 +78,7 @@ class DataBaseHelper {
           Address(1, 'Kazakhstan', 'Almaty', 'Kashtanovaya', '12').toMap(),
           where: "id = ?", whereArgs: [1]);
 
-      await db.delete("Client", where: "id = ?", whereArgs: [1]);
+      await db.delete(DataBaseRequest.tableAddress, where: "id = ?", whereArgs: [1]);
     } on DatabaseException catch (e) {
       print(e.getResultCode());
     }
